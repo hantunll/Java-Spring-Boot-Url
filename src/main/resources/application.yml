@@ -1,0 +1,11 @@
+server:
+  port: 8080
+
+spring:
+  h2:
+    console:
+      enabled: true
+  datasource:
+
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
