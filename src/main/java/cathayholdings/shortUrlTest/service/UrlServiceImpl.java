@@ -49,7 +49,7 @@ public  class UrlServiceImpl implements UrlService {
     private String encodeUrl(String url) {
         String encodeUrl = "";
         LocalDateTime time = LocalDateTime.now();
-        encodeUrl = Hashing.murmur3_128()
+        encodeUrl = Hashing.murmur3_32_fixed()
                 .hashString(url.concat(time.toString()), StandardCharsets.UTF_8)
                 .toString();
         return encodeUrl;
